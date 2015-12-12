@@ -46,9 +46,14 @@ To
 ```
 deb http://archive.raspbian.org/raspbian jessie main contrib non-free
 deb-src http://archive.raspbian.org/raspbian jessie main contrib non-free
+
+deb http://packages.dotdeb.org jessie-php56 all"
+deb-src http://packages.dotdeb.org jessie-php56 all
 ```
 Now get the new files
 ```
+$ wget http://www.dotdeb.org/dotdeb.gpg -O- |apt-key add –
+
 $ sudo apt-get update
 
 $ sudo apt-get upgrade
